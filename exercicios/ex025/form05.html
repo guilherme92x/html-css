@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+</head>
+<body>
+    <h1>Exemplo de Formulário</h1>
+    <form action="cadastro.php" method="get" autocomplete="on">
+
+        <fieldset>
+            <!--
+                Colocando o mesmo nome para os dois inputs, caso um deles seja marcado o outro é automaticamente desmarcado (válido para input radio)
+            -->
+            <legend>Sexo</legend>
+            <input type="radio" name="sexo" id="isxmas"> <label for="isxmas">Masculino</label>
+            <input type="radio" name="sexo" id="isxfem"> <label for="isxfem">Feminino</label>
+            <input type="radio" name="sexo" id="isxnao"> <label for="isxnao">Não quero informar</label>
+        </fieldset>
+
+        <fieldset> 
+            <!-- 
+                envelopando o nome dos esportes com Label para que possam ser clicados para marcação da caixa
+                checkbox cria uma caixa de marcação.
+            -->
+            <legend>Esportes favoritos</legend>
+            <input type="checkbox" name="esfut" id="iesfut"> <label for="iesfut">Futebol</label> <br>
+            <input type="checkbox" name="esbas" id="iesbas"> <label for="iesbas">Basquete</label><br>
+            <input type="checkbox" name="esnat" id="iesnat"> <label for="iesnat">Natação</label><br>
+            <input type="checkbox" name="esmus" id="iesmus"> <label for="iesmus">Musculação</label><br>
+        </fieldset>
+
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="Reset" name="Limpar">
+        </p>
+    </form>
