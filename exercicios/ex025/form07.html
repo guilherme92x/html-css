@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+</head>
+<body>
+    <h1>Exemplo de Formulário</h1>
+    <form action="cadastro.php" method="post" autocomplete="on">
+        
+        <p>
+            <label for="iest">Estado</label>
+            <select name="estado" id="iest">
+
+                <option value="" selected>--- Escolha ---</option>
+                <optgroup label="Região Sudeste">
+                    <option value="SP">São Paulo</option>
+                    <option value="MG">Minas Gerais</option>
+                    <option value="CE">Rio de Janeiro</option>
+                </optgroup>
+
+                <optgroup label="Região Nordeste">
+                    <option value="CE">Ceará</option>
+                    <option value="MA">Maranhão</option>
+                    <option value="RN">Rio Grande do Norte</option>
+                </optgroup>
+                <!--
+                    Deixa o value em branco no OPTION, coloca SELECTED para ser o padrão e escreve o texto que quer que apareça.
+
+                    OPTGROUP só permite que seja escolhida uma opção presente na lista;
+                    DATALIST permite que o usuário digite caso não encontre o que deseja na lista;
+                -->
+            </select>
+        </p>
+            <p>
+                <label for="iprof">Profissão</label>
+                <input type="text" name="prof" id="iprof" list="lstprof">
+                <datalist id="lstprof">
+                    <option>Desenvolvedor de Software</option>
+                    <option>Contador</option>
+                    <option>Administrador</option>
+                </datalist>
+            </p>
+
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar" >
+        </p>
+    </form>
+
+    <p>
+        <label for="imsg">Mensagem</label> <br>
+        <textarea name="msg" id="imsg" cols="30" rows="10"></textarea>
+    </p>
+
+    <P>
+        OPTGROUP (utilizado no Estado) só permite que seja escolhida uma opção presente na lista; <br>
+        DATALIST permite que o usuário digite caso não encontre o que deseja na lista;
+
+    </P>
+    
+</body>
+</html>
