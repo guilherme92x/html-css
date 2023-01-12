@@ -1,0 +1,160 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Work+Sans:ital,wght@0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+@font-face {
+    font-family: 'Android';
+    src: url('../fontes/idroid.otf') format('opentype');
+    font-weight: normal;
+}
+
+:root {
+    --cor0: #e5ebc5;
+    --cor1: #83e1ad;
+    --cor2: #3ddc84;
+    --cor3: #020202;
+    --cor4: #ff0000;
+    --cor5: #ff0000;
+
+    --fonte-padrao: Arial, Verdana, Helvetica, sans-serif;
+    --fonte-destaque: 'Bebas Neue', cursive;
+    --fonte-android: 'Android', cursive; 
+  
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    text-transform: capitalize;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: all;
+}
+
+body {
+    background-color: white;
+    font-family: var(--fonte-padrao);
+}
+
+header {
+    font-size: 70px;
+    color: white;
+    background-image: linear-gradient(to bottom, var(--cor3), var(--cor5));
+    min-height: 150px;
+    text-align: center;
+    padding-top: 40px;
+    font-family: var(--fonte-destaque);
+}
+
+header > h1 {
+    color: white;
+    font-family: var(--fonte-destaque);
+    font-size: 3em;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 0px rgba(48, 47, 47, 0.425);
+}
+
+header > p {
+    color: white;
+    font-size: 1.2em;
+    color: white;
+    max-width: 600px;
+    padding: 0px 5px 5px 5px;
+    margin: auto;
+    text-shadow: 2px 2px 0px rgba(48, 47, 47, 0.26);
+}
+
+nav {
+    background-color: var(--cor4);
+    padding: 3px;
+    box-shadow: 0px 7px 7px rgba(156, 63, 63, 0.658);
+    
+}
+
+nav > a {
+    color: white;
+    font-weight: bold;
+    text-decoration: 10px;
+    border-radius: 5px;
+    margin-left: 15px;
+}
+
+
+h1 {
+    text-align: center;
+}
+
+.container {   
+    align-items: center;    
+    background: white;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.box {
+    flex: 300px;
+    background-color: #fff;
+    border: 1px solid rgb(0, 0, 0);
+    position: relative;
+    overflow: auto;
+    margin: auto;
+}
+
+.box .imagem {
+    padding: 10px;
+    background: #eee;
+    text-align: center;
+    
+}
+
+.box .imagem .img {
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+    filter: drop-shadow(0 3px 5px rgba(0,0,0,.7));
+}
+
+.box .info .title {
+    padding: 10px;
+    color: #666;
+    font-size: 20px;
+}
+
+.box .info .subInfo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 15px;
+    border-top: 1px solid black;
+}
+
+.box .info .subInfo .price {
+    color: red;
+    font-size: 20px;
+}
+ 
+
+.box .imagem:hover {
+    transform: scale(1.05);
+}
+
+footer {
+    background-color: var(--cor5);
+    color: white;
+    text-align: center;
+    font-size: 0.8em;
+    padding: 5px;
+}
+
+footer a {
+    color: white;
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+    color: var(--cor1);
+}
